@@ -9,23 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
     <style>
         body {
-            background: white;
+            background: royalblue;
         }
         
         header {
             width: 100%;
-            min-width: 800px;
-            margin: 0 auto;
-            background: #7391AE;
-            padding: 10px 5px;
-        }
-        
-        #quote {
-            position: absolute;
-            top: 70px;
-            right: 15px;
-            text-align: right;
-            font-family: 'Rouge Script', cursive;
+            padding: 10px 10px;
+            border: 3px solid gold;
         }
         
         #social {
@@ -36,34 +26,10 @@
         
         h1 {
             font-family: 'Slabo 27px', serif;
-            width: 72%;
-            margin: 0 auto;
-            color: whitesmoke;
-            top: 20px;
-            left: 145px;
-            position: absolute;
-            font-size: 2.5em;
         }
         
         h2 {
             font-family: 'Slabo 27px', serif;
-            font-size: 1.1em;
-            width: 72%;
-            margin: 0 auto;
-            color: whitesmoke;
-            top: 70px;
-            left: 145px;
-            position: absolute;
-        }
-        
-        h3 {
-            color: #278B8B;
-            font-family: 'Slabo 27px', serif;
-        }
-        
-        h4 {
-            color: #F9D75C;
-            font-size: 1.3em;
         }
         
         p {
@@ -72,123 +38,22 @@
             color: #375671;
         }
         
-        ul {
-            font-family: 'Slabo 27px', serif;
-            list-style-type: none;
-            font-size: .9em;
-            color: #375671;
-            line-height: 1.6em;
-        }
-        
         a,
         a:visited {
-            color: #2C3595;
-        }
-        
-        .project {
-            width: 80%;
-            min-width: 800px;
-            height: 100%;
-            margin: 35px auto;
-        }
-        
-        .project:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        
-        .project-image {
-            width: 388px;
-            height: 240px;
-            background: white;
-            float: left;
-            margin-right: 20px;
-            border: 2px solid #dddddd;
+            color: gold;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div id="icon"><img src="images/Globe.png"></div>
-        <div id="quote">
-            <h4>“Borders may divide us, but, paradoxically, they're also the places where we're nearest to one another.”<br>-- Ken Jennings</h4> </div>
+        <div id="icon"><img src="images/toc-450.png"></div>
         <div id="social">
-            <a href="mailto: rmichael.mcneil@gmail.com" target="_blank"><img src="images/gmail.png"></a> &nbsp;
-            <a href="https://www.linkedin.com/in/michael-mcneil-8279ba51/" target="_blank"><img src="images/linkedin.png"></a> &nbsp;
-            <a href="https://twitter.com/manandplace" target="_blank"><img src="images/twitter.png"></a> &nbsp;
-            <a href="https://www.instagram.com/mikus31/" target="_blank"><img src="images/instagram.png"></a> &nbsp;
-            <a href="http://www.manandplace.com" target="_blank"><img src="images/man-and-place.png"></a> &nbsp; </div>
-        <h1>Michael McNeil</h1>
-        <h2>Digital Mapping Gallery</h2> </header>
-    <section class="project"> <img src="images/Ultimate-Field-Map.png" alt="Ultimate Field Map" class="project-image">
-        <h3><a target = '_blank' href="https://mikus31.github.io/ultimate-field-map/">Ultimate Field Map</a></h3>
-        <p>Dynamic, interactive ultimate frisbee field map made for event organizers, teams, fans, and media outlets.</p>
-        <p>The map was created using QGIS and Leaflet.</p>
-        <ul>
-            <li>See the map: <a href="https://mikus31.github.io/ultimate-field-map/" target="_blank">Ultimate Field Map</a></li>
-            <li>Data source: <a href="http://www.usaultimate.org/index.html" target="_blank">USA Ultimate</a></li>
-        </ul>
-    </section>
-    <section class="project"> <img src="images/Book-Deserts.png" alt="Book Deserts in St. Tammany Parish" class="project-image">
-        <h3><a target = '_blank' href="maps/book-deserts.pdf">Book Deserts In St. Tammany Parish</a></h3>
-        <p>This quantitative thematic map of St. Tammany Parish in southeast Louisiana plots libraries per 5,000 people in an effort to identify potential "book deserts" in the region.</p>
-        <p>The map was created using QGIS.</p>
-        <ul>
-            <li>See the map: <a href="maps/book-deserts.pdf" target="_blank">Book Deserts In St. Tammany Parish</a></li>
-            <li>Data source: <a href="http://www.census.gov/data.html" target="_blank">United States Census Bureau</a></li>
-        </ul>
-    </section>
-    <section class="project"> <img src="images/Bachelors-Or-Better.png" alt="Bachelor's Or Better" class="project-image">
-        <h3><a target = '_blank' href="https://mikus31.carto.com/builder/05198188-4176-11e7-bd2e-0e05a8b3e3d7/embed">The Undereducated States Of America</a></h3>
-        <p>As of 2015, less than a third of American adults hold a Bachelor's Degree or better from colleges and universities. This map explores that data nationwide.</p>
-        <p>The map was created using Carto.</p>
-        <ul>
-            <li>See the map: <a href="https://mikus31.carto.com/builder/05198188-4176-11e7-bd2e-0e05a8b3e3d7/embed" target="_blank">The Undereducated States Of America</a></li>
-            <li>Data source: <a href="https://www.data.gov/" target="_blank">Data.gov</a></li>
-        </ul>
-    </section>
-    <section class="project"> <img src="images/Cancer-Mortality-Map.png" alt="Cancer Mortality Rates in the USA" class="project-image">
-        <h3><a target = '_blank' href="https://mikus31.carto.com/viz/3fb70546-6ebc-11e6-8730-0e05a8b3e3d7/map">Cancer Mortality Rates In The USA</a></h3>
-        <p>This quantitative thematic map of America displays cancer mortality rates by county for all races, genders, and ages.</p>
-        <p>The map was created using QGIS and Carto.</p>
-        <ul>
-            <li>See the map: <a href="https://mikus31.carto.com/viz/3fb70546-6ebc-11e6-8730-0e05a8b3e3d7/map" target="_blank">Cancer Mortality Rates In The USA</a></li>
-            <li>Data source: <a href="https://www.cancer.gov/" target="_blank">National Cancer Institute</a></li>
-        </ul>
-    </section>
-    <section class="project"> <img src="images/Headshot.png" alt="Me!" class="project-image">
-        <h3><a target = '_blank' href="https://www.linkedin.com/in/michael-mcneil-8279ba51/">Contact Michael</a></h3>
-        <p>Thanks for visiting! This page was created using <a target='_blank' href="https://github.com/">GitHub</a>.</p>
-        <p>To connect, visit any of the links below.</p>
-        <ul>
-            <li>
-                <a href="mailto: rmichael.mcneil@gmail.com" target="_blank"><img src="images/gmail.png"></a> &nbsp;
-                <a href="https://www.linkedin.com/in/michael-mcneil-8279ba51/" target="_blank"><img src="images/linkedin.png"></a> &nbsp;
-                <a href="https://twitter.com/manandplace" target="_blank"><img src="images/twitter.png"></a> &nbsp;
-                <a href="https://www.instagram.com/mikus31/" target="_blank"><img src="images/instagram.png"></a> &nbsp;
-                <a href="http://www.manandplace.com" target="_blank"><img src="images/man-and-place.png"></a> &nbsp; </li>
-        </ul>
-    </section>
-    <!--<section class="project"> <img src="images/Electric-Power-Gen-Map.png" alt="USA Electric Power Generation" class="project-image">
-    <h3><a target = '_blank' href="https://mikus31.github.io/map672-power-gen/">USA Electric Power Generation</a></h3>
-    <p>This proportional symbol map shows power generation for hydro, nuclear, and solar power plants in America.</p>
-    <p>The map was created with custom JavaScript code using Brackets.</p>
-    <ul>
-        <li>See the map: <a href="https://mikus31.github.io/map672-power-gen/" target="_blank">USA Electric Power Generation</a></li>
-        <li>Data source: <a href="http://www.eia.gov/electricity/data/eia923/" target="_blank">USA Energy Information Administration</a></li>
-    </ul>
-</section>-->
-    <!--<section class="project"> <img src="images/Hydro-Power.png" alt="USA Hydro Power Generation" class="project-image">
-        <h3><a target = '_blank' href="https://mikus31.github.io/prop-symbol-hydro/">USA Hydro Power Generation</a></h3>
-        <p>This proportional symbol map shows hydro power generation in America.</p>
-        <p>The map was created with custom JavaScript code using Brackets.</p>
-        <ul>
-            <li>See the map: <a href="https://mikus31.github.io/prop-symbol-hydro/" target="_blank">USA Hydro Power Generation</a></li>
-            <li>Data source: <a href="http://www.eia.gov/electricity/data/eia923/" target="_blank">USA Energy Information Administration</a></li>
-        </ul>
-    </section>-->
+            <a href="mailto: info@teamoclassic.com" target="_blank"><img src="images/gmail.png"></a> &nbsp;
+            <a href="https://facebook.com/teamoclassic" target="_blank"><img src="images/facebook.png"></a> &nbsp;
+            <a href="https://twitter.com/teamoclassic" target="_blank"><img src="images/twitter.png"></a> &nbsp;
+            <a href="https://www.instagram.com/teamoclassic/" target="_blank"><img src="images/instagram.png"></a> &nbsp; </div>
+    </header>
 </body>
 
 </html>
