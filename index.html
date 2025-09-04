@@ -1,178 +1,365 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Team O Classic</title>
-    <meta name=‘viewport’ content=‘initial-scale=1,maximum-scale=1,user-scalable=no’ />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+    <!-- meta: social sharing -->
+    <meta name="description" content="Team O Classic charity golf tournament supporting St. Jude Children's Research Hospital." />
+    <meta property="og:title" content="Team O Classic" />
+    <meta property="og:description" content="Charity golf tournament supporting St. Jude." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/toc-450.png" />
+    <meta name="theme-color" content="#4169e1" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Slabo+27px&display=swap" rel="stylesheet">
     <style>
+        /* ====== design tokens ====== */
+        
+        :root {
+            --brand: #4169e1;
+            /* royalblue */
+            --brand-ink: #1a2a6b;
+            /* deeper blue */
+            --ink: #101828;
+            /* neutral text */
+            --paper: #ffffff;
+            --accent: #E9E910;
+            /* neon yellow from legacy site */
+            --maxw: 1100px;
+            --radius: 16px;
+            --shadow: 0 10px 30px rgba(16, 24, 40, .08);
+        }
+        /* ====== reset (lightweight) ====== */
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box
+        }
+        
+        html,
         body {
-            background: #4169e1;
-            width: 100%;
-            margin: 0 auto;
+            height: 100%
         }
-
-        header {
-            width: 100%;
-            height: 200px;
-            margin: 0 auto;
-            background: white;
+        
+        body {
+            margin: 0;
+            font-family: Roboto, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+            background: var(--brand);
+            color: #fff;
+            line-height: 1.6
         }
-
-        footer {
-            bottom: 0px;
-            width: 100%;
-            min-width: 800px;
-            max-width: 1900px;
-            max-height: 30px;
-            margin: 0 auto;
-            background: white;
+        
+        img {
+            max-width: 100%;
+            display: block
         }
-
-        footer p {
-            font-family: 'Slabo 27px', serif;
-            color: royalblue;
-            font-weight: bold;
-            font-size: 1.2em;
+        
+        a {
+            color: var(--accent);
+            text-decoration: none
         }
-
-        footer a {
-            color: royalblue;
-            font-family: 'Slabo 27px', serif;
-            font-weight: bold;
-            font-size: 1.2em;
+        
+        a:hover {
+            text-decoration: underline
         }
-
-        footer a:visited {
-            color: royalblue;
-            font-family: 'Slabo 27px', serif;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        #social {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-        }
-
-        #jude {
-            position: absolute;
-            left: 15px;
-            top: 25px;
-        }
-
-        #course {
-            position: absolute;
-        }
-
-        #links {
-            font-family: 'Slabo 27px', serif;
-            position: absolute;
-            right: 15px;
-            top: 65px;
-            font-weight: bold;
-            font-size: 1.2em;
-            text-align: right;
-        }
-
-        #links a {
-            color: royalblue;
-        }
-
-        #links a:visited {
-            color: royalblue;
-        }
-
-        h1 {
-            font-family: 'Slabo 27px', serif;
-            margin: 35px auto;
-            margin-left: 20px;
-            margin-right: 20px;
-            font-size: 2.5em;
-            color: #E9E910;
-        }
-
-        h2 {
-            font-family: 'Slabo 27px', serif;
-            color: #E9E910;
-            margin: 35px auto;
-            margin-left: 20px;
-            margin-right: 20px;
-            font-size: 1.8em;
-        }
-
+        
+        h1,
+        h2,
         h3 {
-            font-family: 'Slabo 27px', serif;
-            color: #E9E910;
-            margin: 35px auto;
-            margin-left: 20px;
-            margin-right: 20px;
-            font-size: 1.3em;
+            font-family: 'Slabo 27px', Georgia, serif;
+            margin: 0 0 .4rem;
+            line-height: 1.2;
+            color: var(--accent)
         }
-
+        
         p {
-            font-family: 'Slabo 27px', serif;
-            font-size: 1.3em;
-            color: white;
-            margin: 20px auto;
-            margin-left: 20px;
-            margin-right: 20px;
+            margin: .75rem 0;
+            font-size: 1.125rem
         }
-
-        a,
-        a:visited {
-            color: #E9E910;
+        
+        .wrap {
+            max-width: var(--maxw);
+            margin-inline: auto;
+            padding: 0 1rem
+        }
+        /* ====== header ====== */
+        
+        header {
+            background: var(--paper);
+            color: var(--brand-ink);
+            box-shadow: var(--shadow)
+        }
+        
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: .85rem 0
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: .75rem
+        }
+        
+        .brand img {
+            height: 100px;
+            width: auto
+        }
+        
+        .brand-name {
+            font-family: 'Slabo 27px', Georgia, serif;
+            font-size: 1.65rem;
+            color: var(--brand-ink)
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin: 0;
+            padding: 0
+        }
+        
+        nav a {
+            color: var(--brand-ink);
+            font-weight: 700
+        }
+        
+        .social {
+            display: flex;
+            gap: .5rem;
+            align-items: center
+        }
+        
+        .social a {
+            display: inline-flex
+        }
+        
+        .social img {
+            height: 24px;
+            width: 24px
+        }
+        /* mobile nav */
+        
+        .menu-toggle {
+            display: none
+        }
+        
+        .hamburger {
+            display: none;
+            background: none;
+            border: 0;
+            font-size: 1rem
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--brand-ink);
+            margin: 5px 0
+        }
+        /* ====== hero ====== */
+        
+        .hero {
+            padding: 3.5rem 0 2.5rem
+        }
+        
+        .hero .card {
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: saturate(140%) blur(1px);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.25rem 1.5rem;
+            box-shadow: var(--shadow)
+        }
+        
+        .hero h1 {
+            font-size: 2.25rem
+        }
+        
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #f8f991
+        }
+        /* ====== content blocks ====== */
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0
+        }
+        
+        .col-8 {
+            grid-column: span 8
+        }
+        
+        .col-4 {
+            grid-column: span 4
+        }
+        
+        .panel {
+            background: var(--paper);
+            color: var(--ink);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            box-shadow: var(--shadow)
+        }
+        
+        .panel h3 {
+            color: var(--brand-ink)
+        }
+        
+        .panel a {
+            color: var(--brand)
+        }
+        /* ====== footer ====== */
+        
+        footer {
+            background: var(--paper);
+            color: var(--brand-ink);
+            padding: 1rem 0;
+            margin-top: 2rem;
+            box-shadow: 0 -8px 24px rgba(16, 24, 40, .06)
+        }
+        
+        footer .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .75rem;
+            justify-content: center
+        }
+        
+        footer a {
+            color: var(--brand-ink);
+            font-weight: 700
+        }
+        /* ====== responsive ====== */
+        
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+            .col-8,
+            .col-4 {
+                grid-column: span 12
+            }
+        }
+        
+        @media (max-width: 760px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                inset: 64px 1rem auto 1rem;
+                background: var(--paper);
+                border-radius: 12px;
+                box-shadow: var(--shadow);
+                padding: 1rem;
+                flex-direction: column;
+                align-items: flex-start
+            }
+            .menu-toggle:checked + nav ul {
+                display: flex
+            }
+            .hamburger {
+                display: inline-flex
+            }
+            .social {
+                display: none
+            }
         }
     </style>
 </head>
 
 <body>
+    <!-- ====== header ====== -->
     <header>
-        <center>
-            <a href="http://teamoclassic.com/"><img src="images/toc-450.png"></a>
-        </center>
-        <div id="social">
-            <a href="mailto: info@teamoclassic.com" target="_blank"><img src="images/gmail.png"></a> &nbsp;
-            <a href="https://facebook.com/teamoclassic" target="_blank"><img src="images/facebook.png"></a> &nbsp;
-            <a href="https://twitter.com/teamoclassic" target="_blank"><img src="images/twitter.png"></a> &nbsp;
-            <a href="https://www.instagram.com/teamoclassic/" target="_blank"><img src="images/instagram.png"></a> &nbsp; </div>
-        <div id="links"> <a href="https://mikus31.github.io/team-o-classic/about">About</a>
-            <!--            <br> <a href="https://goo.gl/forms/z4OfX7y3J7zBx2cZ2" target="_blank">Registration</a>-->
-            <br> <a href="https://goo.gl/forms/rN8qp6KMVXhlmFqL2" target="_blank">Registration</a>
-            <!--            <br> <a href="https://goo.gl/forms/HUPHnIaoYpf9ikwx2" target="_blank">Sponsorship</a>-->
-            <br> <a href="https://goo.gl/forms/tO2sKhaVLvjho8V22" target="_blank">Sponsorship</a>
-            <br> <a href="https://goo.gl/forms/PJEy7FrFfGBWlEA62" target="_blank">Volunteer</a>
-            <br> <a href="https://mikus31.github.io/team-o-classic/contact">Contact Us</a> </div>
-        <div id="jude">
-            <a href="https://www.stjude.org/" target="_blank"><img src="images/st-jude-125.png"></a>
+        <div class="wrap topbar">
+            <div class="brand">
+                <a href="/" aria-label="Team O Classic home"> <img src="images/toc-logo.png" alt="Team O Classic logo" /> </a> <span class="brand-name"></span> </div>
+            <!-- mobile hamburger -->
+            <label class="hamburger" for="menu-toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"> <span></span><span></span><span></span> </label>
+            <input class="menu-toggle" type="checkbox" id="menu-toggle" />
+            <nav id="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="https://mikus31.github.io/team-o-classic/about">About</a></li>
+                    <li><a href="https://goo.gl/forms/rN8qp6KMVXhlmFqL2" target="_blank" rel="noopener">Registration</a></li>
+                    <li><a href="https://goo.gl/forms/tO2sKhaVLvjho8V22" target="_blank" rel="noopener">Sponsorship</a></li>
+                    <li><a href="https://goo.gl/forms/PJEy7FrFfGBWlEA62" target="_blank" rel="noopener">Volunteer</a></li>
+                    <li><a href="https://mikus31.github.io/team-o-classic/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social" aria-label="Social links">
+                <a href="mailto:info@teamoclassic.com" title="Email"><img src="images/gmail.png" alt="Email" /></a>
+                <a href="https://facebook.com/teamoclassic" target="_blank" rel="noopener" title="Facebook"><img src="images/facebook.png" alt="Facebook" /></a>
+                <a href="https://twitter.com/teamoclassic" target="_blank" rel="noopener" title="Twitter"><img src="images/twitter.png" alt="Twitter" /></a>
+                <a href="https://www.instagram.com/teamoclassic/" target="_blank" rel="noopener" title="Instagram"><img src="images/instagram.png" alt="Instagram" /></a>
+            </div>
         </div>
     </header>
-    <center>
-        <br>
-        <!--        <a href="posters/toc-2018.pdf" target="_blank"><img src="images/toc-2018.png"></a>-->
-        <!--<p>Thank you for supporting St. Jude at this year's golf tournament! We had another successful year raising money for St. Jude Children's Research Hospital and already are looking forward to next year's golf tournament.</p>-->
-        <br>
-        <p>Mark your calendars! The 2019 TOC golf tournament is back for its fourth year. We will be at <a href="http://www.carterplantation.com/" target="_blank">Carter Plantation</a> for the third year in a row.
-            <br>
-            <p>Monday, October 14, 2019
-                <br>12:00p Shotgun start
-                <br>Registration information coming soon!</p>
-            <p>We look forward to seeing you there on the course in support of St. Jude Children's Research Hospital. Thank you for your support!</p>
-            <!--            <p>Sponsor this event! Click the image below if you are interested in becoming a sign sponsor:</p>-->
-            <p><i>Can't join us this year? That's OK, you still can help! <a href="http://www.heroes.stjude.org/teamoclassic18" target="_blank">Click here to make a donation to St. Jude.</a></i></p>
-            <!--            <br> *** <a href="https://goo.gl/forms/z4OfX7y3J7zBx2cZ2" target="_blank">Register</a> by August 31 for Early Bird Pricing! *** </p>-->
-            <!--<h1>TITLE SPONSOR</h1>
-<h2>EAGLE SPONSORS</h2>
-<h3>BIRDIE SPONSORS-->
-            <!--<br>
-<br>
-<a href="http://www.maxfoote.com/" target="_blank"><img src="sponsors/max-foote.png"></a>
-</h3>-->
-    </center>
+    <!-- ====== main ====== -->
+    <main class="wrap">
+        <section class="hero">
+            <div class="card">
+                <h1>Mark your calendars!</h1>
+                <h2><!-- TODO: update next event details below -->
+            The TOC golf tournament returns.
+          </h2>
+                <p> We look forward to seeing you on the course in support of <a href="https://www.stjude.org/" target="_blank" rel="noopener">St. Jude Children's Research Hospital</a>. </p>
+                <p><em>
+            Can't join us this year? You can still help!
+            <a href="http://www.heroes.stjude.org/teamoclassic18" target="_blank" rel="noopener">Make a donation to St. Jude.</a>
+          </em></p>
+            </div>
+        </section>
+        <section class="grid" aria-label="Event details and links">
+            <article class="panel col-8">
+                <h3>Event details</h3>
+                <!-- NOTE: legacy copy preserved; update as needed -->
+                <p> <strong>Date:</strong> Monday, October 14, 2019
+                    <br /> <strong>Start:</strong> 12:00 PM Shotgun start
+                    <br /> <strong>Course:</strong> <a href="http://www.carterplantation.com/" target="_blank" rel="noopener">Carter Plantation</a> </p>
+                <p><em>Registration information coming soon!</em></p>
+            </article>
+            <aside class="panel col-4" aria-label="Quick links">
+                <h3>Quick links</h3>
+                <p><a href="https://goo.gl/forms/rN8qp6KMVXhlmFqL2" target="_blank" rel="noopener">Player Registration</a></p>
+                <p><a href="https://goo.gl/forms/tO2sKhaVLvjho8V22" target="_blank" rel="noopener">Sponsorship</a></p>
+                <p><a href="https://goo.gl/forms/PJEy7FrFfGBWlEA62" target="_blank" rel="noopener">Volunteer</a></p>
+                <p><a href="https://mikus31.github.io/team-o-classic/contact">Contact Us</a></p>
+            </aside>
+        </section>
+        <section class="panel wrap" style="margin:1.5rem 0 0;">
+            <div class="wrap" style="padding:0">
+                <h3>Our Beneficiary</h3>
+                <p>All proceeds benefit St. Jude Children's Research Hospital.</p>
+                <a href="https://www.stjude.org/" target="_blank" rel="noopener" aria-label="Visit St. Jude"><img src="images/st-jude-125.png" alt="St. Jude logo" style="height:56px;" /></a>
+            </div>
+        </section>
+    </main>
+    <!-- ====== footer ====== -->
     <footer>
-        <center> <a href="posters/toc-2018.pdf" target="_blank">2018 Poster</a> | <a href="https://photos.app.goo.gl/JGXDhweQRgFzQFSj7" target="_blank">2018 Photos</a> | <a href="posters/toc-2017.pdf" target="_blank">2017 Poster</a> | <a href="https://photos.app.goo.gl/iXOychbnwON5nOAP2" target="_blank">2017 Photos</a> | <a href="posters/toc-2016.pdf" target="_blank">2016 Poster</a> | <a href="https://goo.gl/photos/1VkigMU6AszwiW3j6" target="_blank">2016 Photos</a>
+        <div class="wrap">
+            <nav aria-label="Past tournaments" class="links"> <a href="posters/toc-2018.pdf" target="_blank" rel="noopener">2018 Poster</a> <span>•</span> <a href="https://photos.app.goo.gl/JGXDhweQRgFzQFSj7" target="_blank" rel="noopener">2018 Photos</a> <span>•</span> <a href="posters/toc-2017.pdf" target="_blank" rel="noopener">2017 Poster</a> <span>•</span> <a href="https://photos.app.goo.gl/iXOychbnwON5nOAP2" target="_blank" rel="noopener">2017 Photos</a> <span>•</span> <a href="posters/toc-2016.pdf" target="_blank" rel="noopener">2016 Poster</a> <span>•</span> <a href="https://goo.gl/photos/1VkigMU6AszwiW3j6" target="_blank" rel="noopener">2016 Photos</a> </nav>
+        </div>
     </footer>
-</body></html>
+    <!-- optional: tiny js to sync hamburger aria-expanded -->
+    <script>
+        const cb = document.getElementById('menu-toggle');
+        const btn = document.querySelector('label[for="menu-toggle"]');
+        cb ? .addEventListener('change', () => {
+            btn ? .setAttribute('aria-expanded', cb.checked ? 'true' : 'false');
+        });
+    </script>
+</body>
+
+</html>
